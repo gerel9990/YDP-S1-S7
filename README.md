@@ -171,8 +171,24 @@
   else {
     result = `
       <h1>Таны хоёр тархи тэнцвэртэй ажилладаг байх нь.</h1>`;
-  }
- document.getElementById('result').innerHTML = result;
+  const newWindow = window.open("", "_blank");
+    newWindow.document.write(`
+        <html>
+        <head>
+            <title>Үр дүн</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; color: #333; text-align: center; }
+                h1 { color: #2c3e50; }
+                ul { text-align: left; display: inline-block; margin: 0 auto; padding: 0; list-style-type: none; }
+                li { margin-bottom: 10px; }
+            </style>
+        </head>
+        <body>
+            ${result}
+        </body>
+        </html>
+    `);
+    newWindow.document.close();
 }
     </script>
     <div id="result" class="result"></div>
