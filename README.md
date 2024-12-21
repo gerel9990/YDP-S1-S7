@@ -1,5 +1,5 @@
 
-<html lang="en">
+<html >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +60,7 @@
 </head>
 <body>
     <h1>Та тархиныхаа аль талыг илүү сайн ашигладаг вэ?</h1>
-    <form id="quiztForm">
+    <form id="quizForm">
      
         <div class="question">
             <p><b>1. Ахлах сургуульд байхдаа ямар хичээлүүдэд илүү дуртай байсан бэ?</b></p>
@@ -115,7 +115,7 @@
            </div>
 
 
-        <button type="button" class="calculateResult()">Үр дүн</button>
+        <button type="button" onclick="calculateResult()">Үр дүн</button>
     </form>
 
     <script>
@@ -154,7 +154,7 @@
             <ol>Аливаад сэтгэл хөдлөлөөрөө хөдөлдөг</ol>
         </li>`;
   }
-  else if (counts.A >= 4) {
+  else if (counts.B >= 4) {
     result = `<b>Зүүн тархи <br>
         <li>
             <ol>Логик сэтгэхүй сайтай</ol>
@@ -172,7 +172,7 @@
     result = `
       <h1>Таны хоёр тархи тэнцвэртэй ажилладаг байх нь.</h1>`;
   }
- document.getElementById('result').innerText = resultText;
+ document.getElementById('result').innerHTML = result;
 }
     </script>
     <div id="result" class="result"></div>
