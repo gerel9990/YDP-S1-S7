@@ -171,8 +171,9 @@
   else {
     result = `
       <h1>Таны хоёр тархи тэнцвэртэй ажилладаг байх нь.</h1>`;
-  const newWindow = window.open("", "_blank");
-    newWindow.document.write(`
+  if (counts.A < 4 && counts.B < 4) {
+      const newWindow = window.open("", "_blank");
+      newWindow.document.write(`
         <html>
         <head>
             <title>Үр дүн</title>
@@ -187,9 +188,12 @@
             ${result}
         </body>
         </html>
-    `);
-    newWindow.document.close();
-}
+      `);
+      newWindow.document.close();
+    } else {
+      document.getElementById('result').innerHTML = result;
+    }
+  }
     </script>
     <div id="result" class="result"></div>
 </body>
