@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -133,8 +133,8 @@
   }
 
   if (!allAnswered) {
-    alert("Та бүх асуултад хариулна уу.");
-    return;
+     document.getElementById('result').innerText = "Та бүх асуултад хариулна уу.";
+            return;
   }  
   for (let value of answers.values()) {
     counts[value]++;
@@ -172,8 +172,9 @@
     result = `
       <h1>Таны хоёр тархи тэнцвэртэй ажилладаг байх нь.</h1>`;
   }
-  alert(result);
+ document.getElementById('result').innerText = resultText;
 }
     </script>
+    <div id="result" class="result"></div>
 </body>
 </html>  
